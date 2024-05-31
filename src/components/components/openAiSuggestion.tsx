@@ -29,7 +29,7 @@ const OpenAiComponent = ({setSuggestionText}: Props) => {
           {loading ? 'Loading...' : 'generate suggestion'}
         </button>
       </form>
-      {response && <div>{response}</div>}
+      {response && <div className='suggest-container'>{response}</div>}
       
     </div>
   );

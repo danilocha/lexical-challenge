@@ -852,6 +852,15 @@ i.justify-align {
 .stylish-button-modal:hover {
   background-color: #3700b3;
 }
+.suggest-container{
+  padding: 1rem;
+  background-color: #f0f0f0;
+  color: #2c2c2c;
+  line-height: 1.5;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 10px, 10px, 10px, rgb(125, 166, 255);
+}
 
 
 .fade-in {
