@@ -22,6 +22,10 @@ import ListMaxIndentLevelPlugin from './plugins/ListMaxIndentLevelPlugin';
 import CodeHighlightPlugin from './plugins/CodeHighlightPlugin';
 import AutoLinkPlugin from './plugins/AutoLinkPlugin';
 import LexicalErrorBoundary from '@lexical/react/LexicalErrorBoundary';
+import TextStylePlugin from '@/components/plugins/TextStylePlugin';
+import RedLineNode from './nodes/RedLineNode';
+import SuggestionNode from './nodes/SuggestionNode';
+import InsertSuggestionComponent from './plugins/SuggestionPlugin';
 
 function Placeholder() {
   return <div className='editor-placeholder'>Enter some rich text...</div>;
@@ -45,13 +49,17 @@ const editorConfig = {
     TableRowNode,
     AutoLinkNode,
     LinkNode,
+    RedLineNode,
+    SuggestionNode
   ],
 };
 
 const Editor = () => {
   return (
     <LexicalComposer initialConfig={editorConfig}>
-      <div className='editor-container'>
+      <div className='general-container'>
+        <div className='editor-container'>
+        <TextStylePlugin />
         <ToolbarPlugin />
         <div className='editor-inner'>
           <RichTextPlugin
@@ -69,6 +77,11 @@ const Editor = () => {
           <ListMaxIndentLevelPlugin maxDepth={7} />
           <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
         </div>
+        </div>
+        <div>
+          <InsertSuggestionComponent/>
+        </div>
+        
       </div>
     </LexicalComposer>
   );

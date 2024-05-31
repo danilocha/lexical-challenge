@@ -30,6 +30,7 @@ const exampleTheme = {
     strikethrough: 'editor-text-strikethrough',
     underlineStrikethrough: 'editor-text-underlineStrikethrough',
     code: 'editor-text-code',
+    redline: 'redline-style',
   },
   code: 'editor-code',
   codeHighlight: {
